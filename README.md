@@ -12,7 +12,7 @@ All credits goes to him/her.
 ### How to Use
 1. Open the https://install.kenci.workers.dev/ website, verify and get the code
 
-2. Copy in the id and refresh token etc. obtained into index.js
+2. Copy in the id and refresh token etc. obtained into [index.js](https://github.com/Genos2000/goIndex-theme-nexmoe/blob/master/index.js)
 
 3. Deploy index.js code to Cloudflare Workers
 

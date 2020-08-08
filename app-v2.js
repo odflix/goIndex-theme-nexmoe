@@ -5,34 +5,34 @@
  * Combined by jsDelivr.
  * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
  */
-// 在head 中 加载 必要静态
+// Load in the head must be static
 document.write(
-  '<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/5MayRain/goIndex-theme-nexmoe/css/mdui.min.css">'
+  '<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/odflix/goIndex-theme-nexmoe/css/mdui.min.css">'
 );
 document.write(
-  '<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/5MayRain/goIndex-theme-nexmoe@1.1.2/css/nexmoe.min.css">'
+  '<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/odflix/goIndex-theme-nexmoe@1.1.2/css/nexmoe.min.css">'
 );
-// markdown支持
+// markdown support
 document.write(
-  '<script src="//cdn.jsdelivr.net/gh/5MayRain/goIndex-theme-nexmoe/js/markdown-it.min.js"></script>'
+  '<script src="//cdn.jsdelivr.net/gh/odflix/goIndex-theme-nexmoe/js/markdown-it.min.js"></script>'
 );
 document.write(
   "<style>.mdui-appbar .mdui-toolbar{height:56px;font-size:1pc}.mdui-toolbar>*{padding:0 6px;margin:0 2px}.mdui-toolbar>i{opacity:.5}.mdui-toolbar>i{padding:0}.mdui-toolbar>a:hover,a.active,a.mdui-typo-headline{opacity:1}.mdui-container{max-width:980px}.mdui-list-item{transition:none}.mdui-list>.th{background-color:initial}.mdui-list-item>a{width:100%;line-height:3pc}.mdui-list-item{margin:2px 0;padding:0}.mdui-toolbar>a:last-child{opacity:1}</style>"
 );
 document.write(
-  '<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/5MayRain/goIndex-theme-nexmoe/css/DPlayer.min.css">'
+  '<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/odflix/goIndex-theme-nexmoe/css/DPlayer.min.css">'
 );
 document.write(
-  '<script src="//cdn.jsdelivr.net/gh/5MayRain/goIndex-theme-nexmoe/js/DPlayer.min.js"></script>'
+  '<script src="//cdn.jsdelivr.net/gh/odflix/goIndex-theme-nexmoe/js/DPlayer.min.js"></script>'
 );
 document.write(
-  '<script src="//cdn.jsdelivr.net/gh/5MayRain/goIndex-theme-nexmoe/js/hls.min.js"></script>'
+  '<script src="//cdn.jsdelivr.net/gh/odflix/goIndex-theme-nexmoe/js/hls.min.js"></script>'
 );
 document.write(
-  '<script src="//cdn.jsdelivr.net/gh/5MayRain/goIndex-theme-nexmoe/js/flv.min.js"></script>'
+  '<script src="//cdn.jsdelivr.net/gh/odflix/goIndex-theme-nexmoe/js/flv.min.js"></script>'
 );
 
-// 初始化页面，并载入必要资源
+// Initialize the page and load the necessary resources
 function init() {
   document.siteName = $("title").html();
   $("body").addClass("mdui-theme-primary-blue-grey mdui-theme-accent-blue");
@@ -42,8 +42,8 @@ function init() {
 			<a href="/"><img class="avatar" src="https://i.loli.net/2020/04/24/wCxMZFtiv6aKmQ1.png"/></a>
 			<div class="nav_menu">
 				<ul class="menu_ul">
-					<li class="menu_li"><a href="https://5mayrain.github.io/" target="_blank">博客</a></li>
-					<li class="menu_li"><a href="https://drive.google.com/" target="_blank">登陆</a></li>
+					<li class="menu_li"><a href="https://telegram.dog/joinchat/Jz_F70eWJAC6TM8E-yhWyQ" target="_blank">Group Link</a></li>
+					<li class="menu_li"><a href="https://flixtv.xyz/" target="_blank">FlixTV</a></li>
 				</ul>
 				<div class="nav_icon" ></div>
 			</div>
@@ -76,13 +76,13 @@ function render(path) {
   }
 }
 
-// 渲染 title
+// Render title
 function title(path) {
   path = decodeURI(path);
   $("title").html(document.siteName + " - " + path);
 }
 
-// 渲染导航栏
+// Render the navigation bar
 function nav(path) {
   var html = "";
   html += `<a href="/" class="mdui-typo-headline folder">${document.siteName}</a>`;
@@ -102,20 +102,20 @@ function nav(path) {
   $("#nav").html(html);
 }
 
-// 渲染文件列表
+// Render file list
 function list(path) {
   var content = `
 	 <div class="mdui-row"> 
 	  <ul class="mdui-list"> 
 	   <li class="mdui-list-item th"> 
 	    <div class="mdui-col-xs-12 mdui-col-sm-7">
-	     文件 <i class="mdui-icon material-icons icon-sort" data-sort="date" data-order="downward">expand_more</i>
+	     File <i class="mdui-icon material-icons icon-sort" data-sort="date" data-order="downward">expand_more</i>
 	    </div> 
 	    <div class="mdui-col-sm-3 mdui-text-right">
-	     修改时间 <i class="mdui-icon material-icons icon-sort" data-sort="date" data-order="downward">expand_more</i>
+	     Date <i class="mdui-icon material-icons icon-sort" data-sort="date" data-order="downward">expand_more</i>
 	    </div> 
 	    <div class="mdui-col-sm-2 mdui-text-right">
-	     大小 <i class="mdui-icon material-icons icon-sort" data-sort="date" data-order="downward">expand_more</i>
+	     Size <i class="mdui-icon material-icons icon-sort" data-sort="date" data-order="downward">expand_more</i>
 	    </div> 
 	    </li> 
 	  </ul> 
@@ -144,7 +144,7 @@ function list(path) {
       obj.hasOwnProperty("error") &&
       obj.error.code == "401"
     ) {
-      var pass = prompt("目录加密，请输入密码", "");
+      var pass = prompt("Directory encryption, please enter password", "");
       localStorage.setItem("password" + path, pass);
       if (pass != null && pass != "") {
         list(path);
@@ -227,7 +227,7 @@ function get_file(path, file, callback) {
   }
 }
 
-// 文件展示 ?a=view
+// File display ?a=view
 function file(path) {
   var name = path.split("/").pop();
   var ext = name
@@ -248,7 +248,7 @@ function file(path) {
   }
 }
 
-// 文件展示 |html|php|css|go|java|js|json|txt|sh|md|
+// File display |html|php|css|go|java|js|json|txt|sh|md|
 function file_code(path) {
   var type = {
     html: "html",
@@ -270,13 +270,13 @@ function file_code(path) {
 <pre id="editor" ></pre>
 </div>
 <div class="mdui-textfield">
-	<label class="mdui-textfield-label">下载地址</label>
+	<label class="mdui-textfield-label">Download link</label>
 	<input class="mdui-textfield-input" type="text" value="${href}"/>
 </div>
 <a href="${href}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
 
-<script src="//cdn.jsdelivr.net/gh/5MayRain/goIndex-theme-nexmoe/js/ace.js"></script>
-<script src="//cdn.jsdelivr.net/gh/5MayRain/goIndex-theme-nexmoe/js/ext-language_tools.js"></script>
+<script src="//cdn.jsdelivr.net/gh/odflix/goIndex-theme-nexmoe/js/ace.js"></script>
+<script src="//cdn.jsdelivr.net/gh/odflix/goIndex-theme-nexmoe/js/ext-language_tools.js"></script>
 	`;
   $("#content").html(content);
 
@@ -305,7 +305,7 @@ function file_code(path) {
   });
 }
 
-// 文件展示 mp4
+// File display mp4
 function file_video(path) {
   var url = window.location.origin + path;
   var content = `
@@ -314,17 +314,17 @@ function file_video(path) {
 	<div class="mdui-center" id="dplayer">
 	</div>
 	<br>
-	<!-- 固定标签 -->
+	<!-- Fixed label -->
 	<div class="mdui-textfield">
-	  <label class="mdui-textfield-label">下载地址</label>
+	  <label class="mdui-textfield-label">Download link</label>
 	  <input class="mdui-textfield-input" type="text" value="${url}"/>
 	</div>
 	<div class="mdui-textfield">
-	  <label class="mdui-textfield-label">引用地址</label>
+	  <label class="mdui-textfield-label">Reference address</label>
 	  <textarea rows="0" class="mdui-textfield-input"><video><source src="${url}" type="video/mp4"></video></textarea>
 	</div>
 	<div class="mdui-textfield">
-	  <label class="mdui-textfield-label mdui-m-b-3">播放地址</label>
+	  <label class="mdui-textfield-label mdui-m-b-3">Play address</label>
       <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent" onclick="videoPlay('${url}','mp4');">MP4</button>
       <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent" onclick="videoPlay('${url}','hls');">HLS</button>
 	</div>
@@ -390,15 +390,15 @@ function file_image(path) {
 	<img class="mdui-img-fluid" src="${url}"/>
 	<br>
 	<div class="mdui-textfield">
-	  <label class="mdui-textfield-label">下载地址</label>
+	  <label class="mdui-textfield-label">Download link</label>
 	  <input class="mdui-textfield-input" type="text" value="${url}"/>
 	</div>
 	<div class="mdui-textfield">
-	  <label class="mdui-textfield-label">HTML 引用地址</label>
+	  <label class="mdui-textfield-label">HTML Reference address</label>
 	  <input class="mdui-textfield-input" type="text" value="<img src='${url}' />"/>
 	</div>
     <div class="mdui-textfield">
-	  <label class="mdui-textfield-label">Markdown 引用地址</label>
+	  <label class="mdui-textfield-label">Markdown Reference address</label>
 	  <input class="mdui-textfield-input" type="text" value="![](${url})"/>
 	</div>
         <br>
@@ -408,24 +408,24 @@ function file_image(path) {
   $("#content").html(content);
 }
 
-//时间转换
+//Time conversion
 function utc2beijing(utc_datetime) {
-  // 转为正常的时间格式 年-月-日 时:分:秒
+  // Convert to normal time format year-month-day hour: minute: second
   var T_pos = utc_datetime.indexOf("T");
   var Z_pos = utc_datetime.indexOf("Z");
   var year_month_day = utc_datetime.substr(0, T_pos);
   var hour_minute_second = utc_datetime.substr(T_pos + 1, Z_pos - T_pos - 1);
   var new_datetime = year_month_day + " " + hour_minute_second; // 2017-03-31 08:02:06
 
-  // 处理成为时间戳
+  // Processing becomes timestamp
   timestamp = new Date(Date.parse(new_datetime));
   timestamp = timestamp.getTime();
   timestamp = timestamp / 1000;
 
-  // 增加8个小时，北京时间比utc时间多八个时区
+  // Increased by 8 hours, Beijing time is eight time zones more than UTC time
   var unixtimestamp = timestamp + 8 * 60 * 60;
 
-  // 时间戳转为时间
+  // Timestamp to time
   var unixtimestamp = new Date(unixtimestamp * 1000);
   var year = 1900 + unixtimestamp.getYear();
   var month = "0" + (unixtimestamp.getMonth() + 1);
@@ -448,7 +448,7 @@ function utc2beijing(utc_datetime) {
   );
 }
 
-// bytes自适应转换到KB,MB,GB
+// Adaptive conversion of bytes to KB, MB, GB
 function formatFileSize(bytes) {
   if (bytes >= 1000000000) {
     bytes = (bytes / 1000000000).toFixed(2) + " GB";
@@ -476,7 +476,7 @@ String.prototype.trim = function(char) {
   return this.replace(/^\s+|\s+$/g, "");
 };
 
-// README.md HEAD.md 支持
+// README.md HEAD.md stand by
 function markdown(el, data) {
   if (window.md == undefined) {
     //$.getScript('https://cdn.jsdelivr.net/npm/markdown-it@9.1.0/dist/markdown-it.min.js',function(){
@@ -491,7 +491,7 @@ function markdown(el, data) {
   }
 }
 
-// 监听回退事件
+// Listen for fallback events
 window.onpopstate = function() {
   var path = window.location.pathname;
   render(path);

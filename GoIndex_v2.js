@@ -1,10 +1,10 @@
 const authConfig = {
-  "siteName": "GoIndex", // 网站名称
-  "siteIcon": "", // 网站图标
-  "version": "_4.28", // 程序版本。用户不要手动修改
+  "siteName": "GoIndex", // Site Name
+  "siteIcon": "", // Website icon
+  "version": "_4.28", // Program Version. Users should not modify manually
   /*"client_id": "202264815644.apps.googleusercontent.com",
   "client_secret": "X4Z3ca8xfWDb1Voo-F9a7ZxJ",*/
-  // 【注意】强烈推荐使用自己的 client_id 和 client_secret
+  // [Note] It is strongly recommended to use your own client_id and client_secret
   "client_id": "",
   "client_secret": "",
   "refresh_token": "", // 授权 token
@@ -43,10 +43,10 @@ const authConfig = {
     }
   ],
   /**
-   * 文件列表页面每页显示的数量。【推荐设置值为 100 到 1000 之间】；
-   * 如果设置大于1000，会导致请求 drive api 时出错；
-   * 如果设置的值过小，会导致文件列表页面滚动条增量加载（分页加载）失效；
-   * 此值的另一个作用是，如果目录内文件数大于此设置值（即需要多页展示的），将会对首次列目录结果进行缓存。
+    The number displayed on each page of the file list page. [The recommended setting is between 100 and 1000];
+   * If the setting is greater than 1000, it will cause an error when requesting drive api;
+   * If the set value is too small, it will cause the incremental loading (paged loading) of the scroll bar of the file list page to fail;
+   * Another effect of this value is that if the number of files in the directory is greater than this set value (that is, multiple pages are required), the results of the first listing of the directory will be cached.
    */
   "files_list_page_size": 500,
   /**

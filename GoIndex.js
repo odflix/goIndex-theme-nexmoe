@@ -1,13 +1,13 @@
 var authConfig = {
-    "siteName": "GoIndex", // 网站名称
-    "siteIcon": "", // 网站图标
-    "root_pass": "",  // 根目录密码，优先于.password
-    "version": "1.0.6", // 程序版本
+    "siteName": "GoIndex", // Site name
+    "siteIcon": "", // Website Icon
+    "root_pass": "",  // The root directory password, which takes precedence over .password
+    "version": "1.0.6", // Program Version
     "theme": "classic", // material  classic
     "client_id": "",
     "client_secret": "",
-    "refresh_token": "", // 授权 token
-    "root": "" // 根目录ID
+    "refresh_token": "", // token
+    "root": "" // Folder ID
 };
 
 var gd;
@@ -21,7 +21,7 @@ var html = `
   <title>${authConfig.siteName}</title>
   <link rel="shortcut icon" href="${authConfig.siteIcon}" type="image/x-icon" />
 <!--  <script src="//lib.baomitu.com/jquery/3.4.1/jquery.min.js"></script> -->
-  <script src="//cdn.jsdelivr.net/gh/5MayRain/goIndex-theme-nexmoe@1.1.2/app-v2.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/odflix/goIndex-theme-nexmoe@1.1.2/app-v2.js"></script>
 </head>
 <body>
 </body>
